@@ -1,0 +1,71 @@
+/*----NAVBAR-MENU----*/
+/*----DEFAULT-SETTINGS----*/
+.navbar{
+  position: fixed;
+  width: 100%;
+  height: auto;
+  background-color: $dark-grey-color;
+
+  .icon-menu {
+    float: left;
+    width: 26px;
+    height: 30px;
+    padding: 10px 12px;
+    border-right: 1px solid $light-gray-color;
+
+    .stripe{
+      display: block;
+      margin-top: 6px;
+      width: 100%;
+      height: 2px;
+      background-color: $light-gray-color;
+    }
+
+    .stripe:first-child{
+      margin-top: 5px;
+    }
+  }
+
+  .icon-settings{
+    float: right;
+    width: 50px;
+    height: 50px;
+    border-left: 1px solid $light-gray-color;
+
+    img{
+      margin: 8px 0 0 9px;
+    }
+  }
+}
+
+.icon-settings.active, .icon-menu.active{
+    background-color: $green-color;
+    border-color: $green-color;
+}
+
+/*----LIGHT-SETTINGS----*/
+
+.navbar.light{
+  background-color: $light-gray-color;
+
+  .icon-menu{
+    border-right: 1px solid $dark-grey-color;
+
+    .stripe{
+      background-color: $dark-grey-color;
+    }
+
+  }
+  .icon-settings{
+    border-left: 1px solid $dark-grey-color;
+  }
+
+}
+
+.navbar.light .icon-menu.active{
+  border-right: 1px solid $green-color;
+}
+
+.navbar.light .icon-settings.active{
+  border-left: 1px solid $green-color;
+}

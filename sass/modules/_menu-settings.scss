@@ -1,0 +1,84 @@
+/*----MENU-SETTINGS----*/
+
+#menu-settings {
+  position: absolute;
+  top:50px;
+  display: none;
+  padding: 10px 0 20px 0;
+  width: 100%;
+  background-color: $green-color;
+
+  @include min-screen($xlarge-screen) {
+    position: absolute;
+    top:50px;
+    right: 0;
+    display: none;
+    padding: 10px 0 20px 0;
+    width: 300px;
+    background-color: $green-color;
+  };
+
+  label{
+    font-size: 18px;
+    color: $light-gray-color;
+    line-height: 2.5em;
+  }
+}
+
+#menu-slider-font{
+  padding: 0 20px;
+
+  #font_value{
+    display: none;
+  }
+
+}
+
+#menu-slider-width{
+  display: none;
+
+  #width_value{
+    display: none;
+  }
+
+  @include min-screen(1024px) {
+    padding: 0 20px;
+    display: block;
+  };
+}
+
+.style-box{
+  margin-left: 20px;
+
+  p{
+    color: $light-gray-color;
+  }
+
+  .btn{
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+    padding: 15px;
+    float: left;
+    border-radius: 4px;
+
+    p{
+      color: $dark-grey-color;
+      margin-left: 6px;
+      font-size: 32px;
+      padding: 0;
+    }
+  }
+
+  .btn.light{
+    background-color: $light-gray-color;
+    margin-left: 0;
+  }
+  .btn.dark{
+    background-color: $dark-grey-color;
+
+    p{
+      color: $light-gray-color;
+    }
+  }
+}

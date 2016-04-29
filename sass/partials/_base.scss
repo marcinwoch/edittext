@@ -1,0 +1,92 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster+Two:700italic);
+@import url(https://fonts.googleapis.com/css?family=Noto+Serif&subset=latin,latin-ext);
+
+$light-gray-color: rgb(227, 227, 227);
+$dark-grey-color: rgb(43, 43, 43);
+$input-text: rgb(152, 152, 152);
+$green-color: rgb(65, 150, 96);
+
+body{
+  background-color: $light-gray-color;
+}
+
+/*----FONT-BASIC----*/
+
+@mixin base-paragraph-settings {
+  body{
+    font-family: 'Noto Serif', serif;
+    font-size: 14px;
+    font-weight: normal;
+  }
+  p {
+    font-size: 18px;
+    line-height: 1.6em;
+    padding: 10px 0;
+  }
+  h1{
+    font-size: 2.2em;
+    font-weight: 700;
+  }
+  h2{
+    font-size: 2.0em;
+  }
+  h3{
+    font-size: 1.8em;
+  }
+  h4{
+    font-size: 1.6em;
+  }
+  h5{
+    font-size: 1.4em;
+  }
+  h1,h2,h3,h4,h5,h6{
+    padding: 10px 0;
+  }
+
+  .general-text p{
+    text-align: justify;
+    
+    @include screen(320px, 768px - 1px) {
+      font-size: 18px;
+    };
+
+    @include min-screen(768px) {
+      font-size: 22px;
+    };
+  }
+}
+@include base-paragraph-settings;
+
+/*----CONTENT-WIDTH----*/
+
+.container{
+  padding: 67px 15px 0 15px;
+
+  @include screen(768px, 1024px - 1px) {
+    padding-left: 100px;
+    padding-right: 100px;
+  };
+
+  @include min-screen(1024px) {
+    padding-left: 200px;
+    padding-right: 200px;
+  };
+}
+
+/*----CHANGE-STYLE----*/
+
+.styledark{
+  background-color: $dark-grey-color;
+  color: $light-gray-color;
+}
+
+/*-----------------------------------------------------------*/
+.clearfix {
+  zoom:1; /* dla IE < 8 */
+}
+
+.clearfix:after {
+  content:'';
+  display:block;
+  clear:both;
+}

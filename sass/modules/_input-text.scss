@@ -1,0 +1,65 @@
+/*----INPUT-TEXT-CONTENT----*/
+@mixin user-text-style {
+  color: $input-text;
+  font-size: 17px;
+  text-align: center;
+}
+
+textarea#users-text {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  border: solid 2px $input-text;
+  border-radius: 5px;
+  box-sizing: border-box;
+     -webkit-box-sizing:border-box;
+     -moz-box-sizing: border-box;
+  resize: none;
+}
+
+textarea#users-text, textarea{
+  background-color: rgba(0, 0, 0, 0);
+}
+textarea#users-text::-webkit-input-placeholder { /*Chrome, Opera, Safari*/
+   @include user-text-style;
+}
+textarea#users-text:-moz-placeholder { /* Firefox 18- */
+   @include user-text-style;
+}
+textarea#users-text::-moz-placeholder {  /* Firefox 19+ */
+   @include user-text-style;
+}
+textarea#users-text:-ms-input-placeholder { /*IE10*/
+   @include user-text-style;
+}
+
+textarea#users-text:focus::-webkit-input-placeholder { color:transparent; }
+textarea#users-text:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+textarea#users-text:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+textarea#users-text:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+#convert-btn{
+  display: block;
+  width: 100%;
+  background-color: $green-color;
+  border: none;
+  border-radius: 5px;
+  padding: 20px 0;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: $light-gray-color;
+  margin-top: 15px;
+}
+
+.separator{
+  display: block;
+  margin-top: 15px;
+  border-top: 2px solid $input-text;
+
+}
+
+// #users-text:focus {
+//   width: 100%;
+//   background-color: none;
+//   border: 2px solid $dark-grey-color;
+// }
